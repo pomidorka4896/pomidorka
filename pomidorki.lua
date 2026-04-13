@@ -8,12 +8,10 @@ local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("Character")
 
 
-Section:NewSlider("Player Speed", "SliderInfo", 300, 0, function(s)
-   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-
-Section:NewSlider("Jump Power", "SliderInfo", 300, 0, function(s)
-   game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+Section:NewButton("Speed boost(speed350)", "ButtonInfo", function()
+      while game:GetService("RunService").RenderStepped:wait()do
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 350
+      end
 end)
 
 Section:NewToggle("Tp tool", "ToggleInfo", function(state)

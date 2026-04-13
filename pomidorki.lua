@@ -8,9 +8,15 @@ local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("Character")
 
 
-Section:NewButton("Speed boost(speed350)", "ButtonInfo", function()
+Section:NewButton("Speed Boost", "ButtonInfo", function()
       while game:GetService("RunService").RenderStepped:wait()do
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 350
+      end
+end)
+
+Section:NewButton("Jump Power", "ButtonInfo", function()
+      while game:GetService("RunService").RenderStepped:wait()do
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
       end
 end)
 
